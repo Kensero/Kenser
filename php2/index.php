@@ -129,7 +129,9 @@ date_default_timezone_set('Asia/Yekaterinburg');
 
 $chas= date( "H" );
 $min= date("i");
-function hour($hour)
+
+
+function hour($hour)//это ебнутый код который я написал
 {
     if ($hour==1 or $hour==21){
         return $hour . ' ' . 'час';}
@@ -149,6 +151,27 @@ function minute($min)
         return $min .' ' . 'минут';}
 
 }
-echo hour($chas) ; echo ' '; echo minute($min);
+echo hour($chas) ; echo ' '; echo minute($min); //это ебнутый код который я написад
 
+echo '<br>';
+echo '<br>';
 
+function sklonen($n,$s1,$s2,$s3){  //это нормальный код который я скопипастил
+    $m = $n % 10; $j = $n % 100;
+
+    if($m==0 or $m>=5 or ($j>=10 and $j<=20)) return $n.' '.$s3;
+    if($m>=2 and $m<=4) return  $n.' '.$s2;
+    return $n.' '.$s1;
+}
+
+function sklonen1($n,$s1,$s2,$s3){  //это нормальный код который я скопипастил
+    $m = $n % 10;
+    $j = $n % 100;
+
+    if ($m == 0 or $m >= 5 or ($j >= 10 and $j <= 20)) return $n . ' ' . $s3;
+    if ($m >= 2 and $m <= 4) return $n . ' ' . $s2;
+    return $n . ' ' . $s1;
+}
+
+echo sklonen( $chas, 'час','часа', часов); echo ' ';
+echo sklonen1( $min, 'минута', 'минуты', 'минут');

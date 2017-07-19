@@ -105,7 +105,6 @@ foreach($arr2 as $oblast => $gorod){
         if(mb_substr($value, 0, 2) == "К"){
             explode("," , $value);
             echo $value . ",";}
-
     }
     echo"<br>";
 }
